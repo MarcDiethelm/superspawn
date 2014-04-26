@@ -13,6 +13,6 @@
   "license": "Apache",
   "dependencies": {
     "q": "^1.0.1",
-    "shelljs": "~0.2.6"
+    "which": "^1.0.5"
   }
 }
