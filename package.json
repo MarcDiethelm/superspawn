@@ -1,6 +1,6 @@
 {
   "name": "superspawn",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A spawn command that works on Windows too",
   "main": "lib/index.js",
   "scripts": {
@@ -14,5 +14,16 @@
   "dependencies": {
     "q": "^1.0.1",
     "which": "^1.0.5"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/marcdiethelm/superspawn/issues"
+ },
+ "homepage": "https://github.com/marcdiethelm/superspawn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcdiethelm/superspawn.git"
+ },
+ "keywords": [
+    "run", "cmd", "spawn", "windows", "child", "process", "child_process", "promise"
+ ]
 }
