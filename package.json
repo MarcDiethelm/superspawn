@@ -1,0 +1,18 @@
+{
+  "name": "superspawn",
+  "version": "0.0.0",
+  "description": "A spawn command that works on Windows too",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "contributors": [
+    "Andrew Grieve <agrieve@chromium.org>",
+    "Marc Diethelm <marc@web5.me>"
+  ],
+  "license": "Apache",
+  "dependencies": {
+    "q": "^1.0.1",
+    "shelljs": "~0.2.6"
+  }
+}
