@@ -1,7 +1,7 @@
 {
   "name": "superspawn",
   "version": "0.0.1",
-  "description": "A spawn command that works on Windows too",
+  "description": "A Node.js spawn command that works on Windows too",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

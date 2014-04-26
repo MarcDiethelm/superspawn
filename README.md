@@ -7,7 +7,7 @@ Original source from Apache Cordova's superspawn.js by Andrew Grieve.
 
 ##### Windows extras
 - Sets '/c' flag so files other than `.exe` can be run. Supported: `.exe, .cmd, .bat, .js, .vbs`
-- Sets '/s /c' flags so commands (and paths) containing spaces or quotes are parsed correctly.
+- Sets '/s' flags so commands (and paths) containing spaces or quotes are parsed correctly.
 
 See [this Node bug](https://github.com/joyent/node/issues/2318).
 
