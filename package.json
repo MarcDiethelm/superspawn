@@ -4,7 +4,7 @@
   "description": "A Node.js spawn command that works on Windows too",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "contributors": [
     "Andrew Grieve <agrieve@chromium.org>",
@@ -15,15 +15,26 @@
     "q": "^1.0.1",
     "which": "^1.0.5"
   },
+  "devDependencies": {
+    "mocha": "^1.18.2",
+    "rimraf": "^2.2.6"
+  },
   "bugs": {
     "url": "https://github.com/marcdiethelm/superspawn/issues"
- },
- "homepage": "https://github.com/marcdiethelm/superspawn",
+  },
+  "homepage": "https://github.com/marcdiethelm/superspawn",
   "repository": {
     "type": "git",
     "url": "https://github.com/marcdiethelm/superspawn.git"
- },
- "keywords": [
-    "run", "cmd", "spawn", "windows", "child", "process", "child_process", "promise"
- ]
+  },
+  "keywords": [
+    "run",
+    "cmd",
+    "spawn",
+    "windows",
+    "child",
+    "process",
+    "child_process",
+    "promise"
+  ]
 }

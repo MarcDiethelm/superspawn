@@ -1,3 +1,5 @@
+[![Build status (master)](http://b.adge.me/travis/MarcDiethelm/superspawn.svg)](https://travis-ci.org/MarcDiethelm/superspawn) &nbsp; ![npm version](http://b.adge.me/npm/v/superspawn.svg)
+
 superspawn
 =======
 
