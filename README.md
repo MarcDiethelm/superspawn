@@ -5,7 +5,7 @@ superspawn
 
 ###### A Node.js spawn command that works on Windows too.
 
-Original source from Apache Cordova's superspawn.js by Andrew Grieve.
+Original source from Apache Cordova's superspawn.js by Andrew Grieve. Requires Node.js 0.10+.
 
 ##### Windows extras
 - Sets '/c' flag so files other than `.exe` can be run. Supported: `.exe, .cmd, .bat, .js, .vbs`
