@@ -19,16 +19,19 @@ npm i --save superspawn
 
 ## Usage
 
-Superspawn uses the same signature as the native child_process.spawn. But instead of a reference to the child process it returns a [Q.promise](https://github.com/kriskowal/q#readme).
+Superspawn uses the same signature as the native child_process.spawn. But instead of a reference to the child process it returns a [Q.promise](https://github.com/kriskowal/q#readme) or `undefined` if a callback is passed.
 
+### API
 ```js
 var spawn = require('superspawn').spawn
 
 /**
+ * A windows-compatible spawn method. Succeeds for child exit code === 0.
  * @param {string} cmd
  * @param {string[]} [args]
  * @param {opts} [opts]
- * @returns {Q.promise} - Returns a promise that succeeds only for return code = 0.
+ * @param {function} [callback] - standard Node callback, omit if you want to use a promise.
+ * @returns {Q.promise|undefined} - returns a promise or undefined if a callback is passed.
  *
  * @typedef {Object} opts
  * @property {boolean} [printCommand=false] - Whether to log the command
@@ -39,10 +42,27 @@ var spawn = require('superspawn').spawn
  * @property {object} env - Map of extra environment variables.
  * @property {string} cwd - Working directory for the command.
  */
+spawn(cmd, args, opts, function(err, output) {
+    if (err) return err;
+});
+
+// or
+
 spawn(cmd, args, opts)
-  .catch(function(err) {}) // rejectedHandler
-  .then(function(stdout) {}) // resolvedHandler
+    .catch(function(err) {}) // rejectedHandler
+    .then(function(stdout) {}) // resolvedHandler
 ;
+```
+### Examples
+```js
+spawn('echo', ['buffalo'], function(err, output) {
+    if (err) return err;
+    assert.equal(output, 'buffalo');
+});
+
+spawn('./script.sh', 'inherit', function(err) {
+    if (err) return err;
+});
 ```
 
 ## Todo
