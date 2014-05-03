@@ -22,7 +22,7 @@ describe('Superspawn', function() {
     });
 
     it('should return a promise', function() {
-        var actual = spawn('echo', function() {});
+        var actual = spawn('echo');
         assert(Q.isPromise(actual));
     });
 
