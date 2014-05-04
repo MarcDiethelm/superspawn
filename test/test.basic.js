@@ -26,6 +26,11 @@ describe('Superspawn', function() {
         actual.done();
     });
 
+    it('should be able to start the npm executable (.cmd on Windows)', function() {
+        var actual = spawn('npm');
+        actual.done();
+    });
+
     it('should be able to start a native executable (echo)', function() {
         var actual = spawn(
             'echo'
