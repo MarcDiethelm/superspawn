@@ -1,7 +1,7 @@
-[![Build status (master)](http://b.adge.me/travis/MarcDiethelm/superspawn.svg)](https://travis-ci.org/MarcDiethelm/superspawn) &nbsp; ![npm version](http://b.adge.me/npm/v/superspawn.svg)
+[![Build status (master)](http://b.adge.me/travis/MarcDiethelm/superspawn/master.svg)](https://travis-ci.org/MarcDiethelm/superspawn) &nbsp; ![npm version](http://b.adge.me/npm/v/superspawn.svg)
 
 superspawn
-=======
+==========
 
 ###### A Node.js spawn command that works on Windows too.
 
