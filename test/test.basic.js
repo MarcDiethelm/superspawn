@@ -21,9 +21,31 @@ describe('Superspawn', function() {
         });
     });
 
+    it('should be able to start the node executable (.exe on Windows)', function() {
+        var actual = spawn('node');
+        actual.done();
+    });
+
+    it('should be able to start a native executable (echo)', function() {
+        var actual = spawn(
+            'echo'
+        );
+        actual.done();
+    });
+
+    it('should be able to run a .js file', function() {
+        var actual = spawn(
+            path.join(process.cwd(), 'test/fixtures/env.js')
+        );
+        actual.done();
+    });
+
     it('should return a promise', function() {
-        var actual = spawn('echo');
+        var actual = spawn(
+            'echo'
+        );
         assert(Q.isPromise(actual));
+        actual.done();
     });
 
     it('should execute a callback', function(done) {
@@ -104,18 +126,6 @@ describe('Superspawn', function() {
             ,function(err, output) {
                 if (err) throw err;
                 assert.strictEqual(output, '');
-                done();
-            }
-        );
-    });
-
-    it('should execute a file', function(done) {
-        var expected = 'file executed';
-        spawn(
-            path.join(process.cwd(), 'test/fixtures/file.js')
-            ,function(err, output) {
-                if (err) throw err;
-                assert.strictEqual(output, expected);
                 done();
             }
         );
