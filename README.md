@@ -66,6 +66,3 @@ spawn('./script.sh', 'inherit', function(err) {
     if (err) return err;
 });
 ```
-
-## Todo
-- [ ] Write tests
