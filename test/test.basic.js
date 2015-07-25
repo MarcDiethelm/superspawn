@@ -149,6 +149,16 @@ describe('Superspawn', function() {
         );
     });
 
+    it('should return a rejected promise on error', function(done) {
+        spawn('nonExistingExecutableCommand')
+            .done(function() {
+                assert.fail();
+                done();
+            }, function() {
+                done();
+            });
+    });
+
     after(function(done) {
         // rm -rf tempPath
         rimraf(tempPath, done);
